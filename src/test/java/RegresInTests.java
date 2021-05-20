@@ -13,7 +13,7 @@ public class RegresInTests {
     }
 
     @Test
-    void UserNotFound() {
+    void userNotFound() {
         given()
                 .when()
                 .get("/api/users/23")
@@ -22,7 +22,7 @@ public class RegresInTests {
     }
 
     @Test
-    void CreateUser() {
+    void createUser() {
         given()
                 .contentType(JSON)
                 .body("{ \"name\": \"morpheus\", \"job\": \"leader\" }")
@@ -34,7 +34,7 @@ public class RegresInTests {
     }
 
     @Test
-    void UpdateUserInfo() {
+    void updateUserInfo() {
         given()
                 .contentType(JSON)
                 .body("{ \"name\": \"morpheus\", \"job\": \"zion resident\" }")
@@ -46,7 +46,7 @@ public class RegresInTests {
     }
 
     @Test
-    void DeleteUser() {
+    void deleteUser() {
         given()
                 .when()
                 .delete("/api/users/2")
@@ -55,7 +55,7 @@ public class RegresInTests {
     }
 
     @Test
-    void LoginWithNoPassword() {
+    void loginWithNoPassword() {
         given()
                 .contentType(JSON)
                 .body("{ \"email\": \"peter@klaven\" }")
